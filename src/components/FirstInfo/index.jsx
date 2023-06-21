@@ -1,7 +1,7 @@
-import bill1 from '../../img/pontoon-calculator/bill1.jpg';
-import bill2 from '../../img/pontoon-calculator/bill2.jpg';
-import oldImg from '../../img/before-un.jpg';
-import oldImg2 from '../../img/before-un-2.jpg';
+import bill1 from '../../img/grizly1.jpg';
+import bill2 from '../../img/grizly2.jpg';
+import oldImg from '../../img/grizly3.jpg';
+
 
 
 import React from 'react'
@@ -15,16 +15,16 @@ function New() {
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-6 border rounded-4 border-dark-subtle bg-white pt-2 mb-3">
                         <h4 className="fw-bold sblue"><em>
-                            Protect the Factory Finish on your Pontoons for up to 10 years
+                            Clean Your Pontoons &amp; and Restore the Factory Finish
                         </em>
                         </h4>
-                        <h5 className="text-danger fw-bold fs-3"><em><span className="mx-1">✓ </span>Get a 3 Year Factory Warranty!</em></h5>
+                        <h5 className="text-danger fw-bold fs-3"><em><span className="mx-1">✓ </span>Finish Proven to Last Up to 10 Years</em></h5>
                         <div className="row mt-2">
                             <div className="col">
-                                <p className="sblue"><span className="text-danger"><b><em>Protected</em></b></span>
+                                <p className="sblue"><span className="text-danger"><b><em>Before</em></b></span>
                                     <span><br />New Pontoons protected with <b>Alumetron</b> and <b>VS721</b></span>
                                 </p>
-                                <div className="row">
+                                <div className="row" style={{ marginLeft: '100px' }}>
                                    <div
                                           className="col-5 col-sm-5 col-md-5 col-lg-5"
                                           style={{
@@ -32,8 +32,7 @@ function New() {
                                             backgroundColor: 'transparent',
                                             transition: 'background-color 0.3s',
                                           }}
-                                          onMouseEnter={(e) => (e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.3)')}
-                                          onMouseLeave={(e) => (e.target.style.backgroundColor = 'transparent')}
+                                         
                                         >
                                           <Popup
                                             imagelink={bill1}
@@ -43,22 +42,13 @@ function New() {
                                           />
                                           <p className="text-center sblue">Click to enlarge</p>
                                     </div>
-                                    <div className="col-5 col-sm-5 col-md-5 col-lg-5">
-                                        <Popup 
-                                            imagelink = {bill2}
-                                            alttext = "new pontoon boat protected with Alumetron"
-                                            mtarget = "#exampleModal2"
-                                            mid = "exampleModal2"
-                                        />
-                                        {/* <a href={newImg2} rel="noreferrer" target="_blank"><img className="img-fluid" src={newImg2} alt="new pontoon boat protected with Alumetron" width={260} /></a> */}
-                                        <p className="text-center sblue">Click to enlarge</p>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col">
-                                <p className="sblue"><span className="text-danger"><em><b>Unprotected</b></em></span>
+                                <p className="sblue"><span className="text-danger"><em><b>After</b></em></span>
                                     <span><br />Pontoons after 1 season in a fresh water lake</span>
                                 </p>
                             </div>
@@ -66,7 +56,7 @@ function New() {
                         <div className="row">
                             <div className="col-5 col-sm-5 col-md-5 col-lg-5">
                             <Popup 
-                                            imagelink = {oldImg}
+                                            imagelink = {bill2}
                                             alttext = "Unpontoon boat protected with Alumetron"
                                             mtarget = "#exampleModal3"
                                             mid = "exampleModal3"
@@ -76,7 +66,7 @@ function New() {
                             </div>
                             <div className="col-5 col-sm-5 col-md-5 col-lg-5">
                             <Popup 
-                                            imagelink = {oldImg2}
+                                            imagelink = {oldImg}
                                             alttext = "Unpontoon boat protected with Alumetron"
                                             mtarget = "#exampleModal4"
                                             mid = "exampleModal4"
@@ -116,7 +106,7 @@ function New() {
                                         <li>Calculates the Sq. Ft. of Your Pontoons</li>
                                         <li>Determines the Products You Need</li>
                                         <li>Gives You a Quote</li>
-                                        <li>3 Year Factory Warranty</li>
+                                        <li>Get Your 3 Year Transferable Factory Warranty</li>
                                     </ul>
                                 </div>
                             </div>

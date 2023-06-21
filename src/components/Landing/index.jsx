@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import CostComparison from './CostComparison'
 import HowTo from './HowTo'
@@ -36,6 +38,15 @@ function Landing() {
       };
 
        const HowToRef = useRef(null);
+       function ScrollToTop() {
+          const { pathname } = useLocation();
+
+          useEffect(() => {
+            window.scrollTo(0, 0);
+          }, [pathname]);
+
+          return null;
+        };
 
   function scrollToHowTo() {
         HowToRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -51,8 +62,10 @@ function Landing() {
         color: 'blue',
         fontSize: '1.5rem',
         transition: 'background-color 0.3s ease',
-        border: "1px solid #000000",
-        borderRadius: "20px" // Adding transition for smooth effect
+        border: "1px solid #00008B",
+        borderRadius: "10px", // Adding transition for smooth effect
+         padding: "0.0rem 1rem",
+         marginLeft: "4.5rem" // Adjust the marginLeft value as needed
     };
 
        const [isPopupOpen, setPopupOpen] = useState(false);
@@ -141,7 +154,7 @@ function Landing() {
                         type="button"
                         className="btn btn-lg me-4 mt-2"
                         onClick={handleClick}
-                        style={{ ...buttonStyle, color: "#000000", border: "1px solid #000000" }}
+                        style={{ ...buttonStyle, color: "blue", border: "1px solid #00008B" }}
                         onMouseEnter={(e) => {
                           e.target.style.backgroundColor = "#77ccff";
                         }}
@@ -149,7 +162,7 @@ function Landing() {
                           e.target.style.backgroundColor = "#ffffff";
                         }}
                       >
-                        <FaYoutube icon="fa-brands fa-youtube" style={{ color: "#000000", fontSize: "33px" }} />
+                        <FaYoutube icon="fa-brands fa-youtube" style={{ color: "#00008B", fontSize: "33px" }} />
                         &nbsp;&nbsp;&nbsp;How To YouTube Video?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </button>
                     </h7>
@@ -161,7 +174,7 @@ function Landing() {
                                 style={buttonStyle}
                                 onMouseEnter={(e) => { e.target.style.backgroundColor = '#77ccff'; }}
                                 onMouseLeave={(e) => { e.target.style.backgroundColor = '#ffffff'; }}>
-                           <FaRegDotCircle icon="fa-solid fa-circle-dot" style={{color: "#000000", fontSize:"20px"}} />
+                           <FaRegDotCircle icon="fa-solid fa-circle-dot" style={{color: "#00008B", fontSize:"20px"}} />
                             &nbsp;&nbsp;&nbsp;Dealer Applied VS DIY Comparison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
                           </button>
                     </h8>

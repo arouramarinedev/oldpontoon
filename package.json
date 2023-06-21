@@ -1,6 +1,6 @@
 {
-  "name": "pontoon-cal-new-step-by-step",
-  "version": "0.1.0",
+  "name": "Used-pontoon-cal-",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
